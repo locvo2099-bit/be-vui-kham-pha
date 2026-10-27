@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#faf7ef">
+  <meta name="description" content="Những trò chơi nhỏ cho bé 2–3 tuổi và thế giới xe thú vị.">
+  <title>Bé Vui Khám Phá — Chơi cùng con, lớn cùng con</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#home" aria-label="Bé Vui Khám Phá, về trang chủ"><span class="brand-mark"><span>✳</span></span><span><strong>Bé Vui</strong><small>KHÁM PHÁ</small></span></a>
+      <nav class="main-nav" aria-label="Điều hướng chính">
+        <a href="#vehicles">Thế giới xe</a><a href="#games">Cùng khám phá</a><a href="#parents">Góc bố mẹ</a>
+      </nav>
+      <div class="header-tools"><span class="age-pill">Dành cho bé 2–3 tuổi</span><button class="icon-btn settings-open" type="button" aria-label="Cài đặt âm thanh và nhắc nghỉ" title="Cài đặt">⚙</button></div>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> MỖI NGÀY MỘT ĐIỀU MỚI</div>
+        <h1>Một chút tò mò.<br><em>Thật nhiều niềm vui.</em></h1>
+        <p>Chạm, chơi và khám phá thế giới cùng con. Những trò chơi nhỏ lấy cảm hứng từ Montessori, dành riêng cho đôi tay bé xíu.</p>
+        <div class="hero-actions"><a class="button primary" href="#vehicles">🚗 &nbsp; Khám phá thế giới xe <span>→</span></a><a class="button plain" href="#games">Xem tất cả trò chơi <span>↗</span></a></div>
+        <div class="hero-note"><span class="note-icon">♡</span> Không quảng cáo <i></i> Không cần đăng nhập <i></i> Chơi cùng bố mẹ</div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-sun"></div><div class="art-cloud cloud-one"></div><div class="art-cloud cloud-two"></div>
+        <div class="art-hill hill-back"></div><div class="art-hill hill-front"></div><div class="art-road"></div>
+        <div class="hero-vehicle" id="hero-vehicle"></div><span class="art-flower flower-one">✿</span><span class="art-flower flower-two">✿</span><span class="art-spark">✦</span>
+        <div class="art-tag"><span>♥</span> Chơi vui, học tự nhiên</div>
+      </div>
+    </section>
+
+    <section class="vehicle-section section" id="vehicles">
+      <div class="wrap">
+        <div class="section-top"><div><div class="eyebrow rust">VÙNG VUI CHƠI YÊU THÍCH</div><h2>Thế giới phương tiện <span>🚗</span></h2><p>Xe cứu hỏa, xe cứu thương, máy xúc và thật nhiều người bạn có bánh xe!</p></div><span class="section-note">ĐƯỢC THIẾT KẾ CHO TAY BÉ <span>✳</span></span></div>
+        <div class="feature-layout"><button class="feature-card" data-game="explore" type="button"><div class="feature-copy"><span class="tag cream-tag">BẮT ĐẦU TỪ ĐÂY</span><h3>Gara xe<br>của bé</h3><p>Chạm vào từng chiếc xe, nghe tên và khám phá cùng bố mẹ nhé!</p><span class="feature-link">Mở gara xe <b>→</b></span></div><div class="feature-vehicles" id="feature-vehicles"></div><span class="feature-decor">✷</span></button>
+          <div class="side-games" id="vehicle-games"></div>
+        </div>
+        <div class="vehicle-strip"><span class="strip-title">TRONG GARA CÓ</span><div class="strip-items" id="vehicle-strip"></div><button class="strip-more" data-game="explore" type="button">Và nhiều xe nữa <span>→</span></button></div>
+      </div>
+    </section>
+
+    <section class="section discovery" id="games"><div class="wrap"><div class="section-top"><div><div class="eyebrow rust">CHƠI MÀ HỌC</div><h2>Hôm nay mình chơi gì? <span>✿</span></h2><p>Những trò chơi nhỏ giúp bé quan sát, thử nghiệm và tự mình khám phá.</p></div><span class="section-note">CHẬM RÃI MÀ VUI <span>✳</span></span></div><div class="game-grid" id="general-games"></div></div></section>
+
+    <section class="parents-section section" id="parents"><div class="wrap parents-layout"><div class="parent-intro"><div class="eyebrow rust">MỘT CHÚT THỜI GIAN BÊN NHAU</div><h2>Góc nhỏ<br>cho bố mẹ <span>♥</span></h2><p>Chơi trên màn hình là một khởi đầu. Mình cùng mang niềm vui ấy ra thế giới thật nhé.</p><div class="parent-tip">✳ <span>Hãy để bé tự thử, kể cả khi bé cần thêm một chút thời gian.</span></div></div><div class="activities" id="activities"></div></div></section>
+
+    <section class="closing wrap"><div class="closing-icon">✿</div><div><h2>Mỗi khoảnh khắc chơi cùng nhau đều thật quý.</h2><p>Một chiếc xe, một câu chuyện, một nụ cười — thế là đủ vui rồi.</p></div><a href="#vehicles" class="button primary">Cùng bé chơi nhé <span>→</span></a></section>
+  </main>
+  <footer><div class="wrap footer-inner"><div class="brand footer-brand"><span class="brand-mark"><span>✳</span></span><span><strong>Bé Vui</strong><small>KHÁM PHÁ</small></span></div><p>Được làm với yêu thương dành cho những bạn nhỏ tò mò. <span>♥</span></p><span class="footer-caption">CHƠI CÙNG CON · LỚN CÙNG CON</span></div></footer>
+
+  <div id="game-layer" class="overlay" hidden><section class="game-dialog" role="dialog" aria-modal="true" aria-labelledby="game-title"><div class="game-top"><button class="back-btn" id="close-game" type="button">← <span>Về trang chủ</span></button><div class="game-brand">✳ <span>BÉ VUI KHÁM PHÁ</span></div><button class="icon-btn settings-open" type="button" aria-label="Cài đặt">⚙</button></div><div class="game-content"><div class="game-heading"><div><div class="eyebrow rust" id="game-category"></div><h2 id="game-title"></h2><p id="game-instruction"></p></div><div class="level-pills" aria-label="Chọn mức độ"><button class="level active" data-level="1" type="button">Mức 1 <small>Dễ</small></button><button class="level" data-level="2" type="button">Mức 2 <small>Thử thêm</small></button></div></div><div class="game-stage" id="game-stage"></div><div class="game-bottom"><div class="game-feedback" id="feedback" role="status" aria-live="polite">Bé cứ từ từ nhé! ♥</div><div class="game-actions"><button class="button small secondary" id="repeat-instruction" type="button">🔊 Nghe hướng dẫn</button><button class="button small secondary" id="restart-game" type="button">↻ Chơi lại</button></div></div><div class="parent-inline" id="parent-inline"></div></div></section></div>
+
+  <div id="settings-layer" class="overlay settings-overlay" hidden><section class="settings-dialog" role="dialog" aria-modal="true" aria-labelledby="settings-title"><div class="settings-head"><div><div class="eyebrow rust">DÀNH CHO BỐ MẸ</div><h2 id="settings-title">Cài đặt nhỏ</h2></div><button class="icon-btn" id="close-settings" type="button" aria-label="Đóng">✕</button></div><div class="settings-row"><div><strong>Giọng đọc tiếng Việt</strong><p>Đọc tên và hướng dẫn khi bé chơi. Chất lượng giọng tùy theo thiết bị.</p></div><button class="toggle" id="voice-toggle" role="switch" aria-checked="true" type="button"><span></span></button></div><div class="settings-row"><div><strong>Âm thanh trò chơi</strong><p>Âm thanh nhẹ và tiếng xe mô phỏng khi bé chơi.</p></div><button class="toggle" id="sound-toggle" role="switch" aria-checked="true" type="button"><span></span></button></div><div class="timer-block"><strong>Nhắc bé nghỉ</strong><p>Chọn thời gian chơi trên trang. Đồng hồ có thể tạm dừng khi trình duyệt chạy nền.</p><div class="timer-options"><button data-minutes="0" type="button">Tắt</button><button data-minutes="10" type="button">10 phút</button><button data-minutes="15" type="button">15 phút</button><button data-minutes="20" type="button">20 phút</button></div><div id="timer-status">Chưa bật nhắc nghỉ.</div></div><button class="button primary settings-done" id="settings-done" type="button">Xong rồi <span>✓</span></button></section></div>
+  <div id="rest-layer" class="overlay rest-overlay" hidden><section class="rest-card" role="dialog" aria-modal="true" aria-labelledby="rest-title"><span class="rest-emoji">🌿</span><h2 id="rest-title">Mình nghỉ một chút nhé!</h2><p>Đã đến giờ bố mẹ và bé nghỉ mắt, uống nước hoặc cùng chơi với đồ vật thật rồi.</p><button class="button primary" id="rest-close" type="button">Mình đã biết ♥</button></section></div>
+  <script src="./app.js" defer></script>
+</body>
+</html>
