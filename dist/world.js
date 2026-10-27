@@ -83,6 +83,7 @@ let selectedGroup='rescue',page=0,adventureStep=0;
 const groupMap=Object.fromEntries(groups.map(g=>[g.id,g]));
 const prevRender=renderGame;
 function adventureObject(object){
+ if(['wagon','hose','soap'].includes(object))return vehicle('prop_'+object);
  if(['fire','excavator','dump','train','plane','car','ferry'].includes(object))return vehicle(object);
  if(object==='wagon')return '<svg viewBox="0 0 240 145" aria-hidden="true"><rect x="28" y="48" width="173" height="58" rx="14" fill="#86b8c9"/><rect x="43" y="60" width="34" height="22" rx="5" fill="#e0f3ec"/><rect x="91" y="60" width="34" height="22" rx="5" fill="#e0f3ec"/><rect x="139" y="60" width="34" height="22" rx="5" fill="#e0f3ec"/>'+tyre(62,109,15)+tyre(169,109,15)+'</svg>';
  if(object==='hose')return '<svg viewBox="0 0 240 145" aria-hidden="true"><path d="M28 102q37-8 64-46l26 18q-17 43-67 50z" fill="#e8bd78"/><path d="M98 57l18-21 19 13-17 25z" fill="#86a8a6"/><path d="M140 43q20-14 30-27m-23 38q32-8 51-8m-49 22q27 5 43 18" fill="none" stroke="#78c9e5" stroke-width="12" stroke-linecap="round"/></svg>';

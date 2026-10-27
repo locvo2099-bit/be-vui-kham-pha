@@ -7,7 +7,8 @@
   <meta name="description" content="Những trò chơi nhỏ cho bé 2–3 tuổi và thế giới xe thú vị.">
   <title>Bé Vui Khám Phá — Chơi cùng con, lớn cùng con</title>
   <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="./world.css">
+  <link rel="stylesheet" href="./world.css?v=3d2">
+  <link rel="stylesheet" href="./visuals.css?v=3d2">
 </head>
 <body>
   <header class="site-header">
@@ -59,7 +60,8 @@
 
   <div id="settings-layer" class="overlay settings-overlay" hidden><section class="settings-dialog" role="dialog" aria-modal="true" aria-labelledby="settings-title"><div class="settings-head"><div><div class="eyebrow rust">DÀNH CHO BỐ MẸ</div><h2 id="settings-title">Cài đặt nhỏ</h2></div><button class="icon-btn" id="close-settings" type="button" aria-label="Đóng">✕</button></div><div class="settings-row"><div><strong>Giọng đọc tiếng Việt</strong><p>Đọc tên và hướng dẫn khi bé chơi. Chất lượng giọng tùy theo thiết bị.</p></div><button class="toggle" id="voice-toggle" role="switch" aria-checked="true" type="button"><span></span></button></div><div class="settings-row"><div><strong>Âm thanh trò chơi</strong><p>Âm thanh nhẹ và tiếng xe mô phỏng khi bé chơi.</p></div><button class="toggle" id="sound-toggle" role="switch" aria-checked="true" type="button"><span></span></button></div><div class="timer-block"><strong>Nhắc bé nghỉ</strong><p>Chọn thời gian chơi trên trang. Đồng hồ có thể tạm dừng khi trình duyệt chạy nền.</p><div class="timer-options"><button data-minutes="0" type="button">Tắt</button><button data-minutes="10" type="button">10 phút</button><button data-minutes="15" type="button">15 phút</button><button data-minutes="20" type="button">20 phút</button></div><div id="timer-status">Chưa bật nhắc nghỉ.</div></div><button class="button primary settings-done" id="settings-done" type="button">Xong rồi <span>✓</span></button></section></div>
   <div id="rest-layer" class="overlay rest-overlay" hidden><section class="rest-card" role="dialog" aria-modal="true" aria-labelledby="rest-title"><span class="rest-emoji">🌿</span><h2 id="rest-title">Mình nghỉ một chút nhé!</h2><p>Đã đến giờ bố mẹ và bé nghỉ mắt, uống nước hoặc cùng chơi với đồ vật thật rồi.</p><button class="button primary" id="rest-close" type="button">Mình đã biết ♥</button></section></div>
-  <script src="./app.js" defer></script>
-  <script src="./world.js" defer></script>
+  <script src="./app.js?v=3d2" defer></script>
+  <script src="./world.js?v=3d2" defer></script>
+  <script src="./visuals.js?v=3d2" defer></script>
 </body>
 </html>

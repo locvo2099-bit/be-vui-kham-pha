@@ -1,0 +1,18 @@
+/* Shared 3D artwork: keep transparent edges and original toy proportions. */
+.toy-visual{overflow:hidden;isolation:isolate}
+.toy-card-icon svg{width:100%;height:100%;display:block}
+.side-card .card-visual.toy-card-icon{width:115px;height:76px;font-size:0}
+.general-card .game-icon.toy-card-icon{width:94px;height:65px;background:transparent;border-radius:0;font-size:0}
+.explore-card .toy-visual{height:125px}
+.world-category .world-toy .toy-visual{height:100%;width:100%}
+.item-tile .toy-visual,.target-tile .toy-visual{width:125px;height:83px}
+.explore-selected .toy-visual{width:100px;height:65px}
+.adventure-object .toy-visual{pointer-events:none}
+.toy-wheel-board{height:auto;max-width:470px;margin:0 auto}
+.toy-wheel-board>svg{width:100%;height:auto;display:block}
+.toy-wheel-board .wheel-slot{transform:translate(-50%,-50%);min-width:44px;padding:0;line-height:1;aspect-ratio:1}
+.toy-wheel-board .wheel-slot.filled,.wheel-shape{background:radial-gradient(circle at 43% 39%,#f6eee0 0 13%,#c6b39a 14% 29%,#a18c72 30% 33%,#454644 34% 55%,#262c2b 56% 68%,#5b625e 69% 77%,#303633 78%);border:2px solid #4b514d;box-shadow:inset 1px 2px 3px #ffffff50,2px 3px 4px #24382c30;color:transparent}
+.wheel-shape{display:block;width:60px;height:60px;border-radius:50%;font-size:0}
+.toy-wheel-board .wheel-slot.filled{font-size:0}
+.silhouette .toy-visual{filter:brightness(0) opacity(.35)}
+@media(max-width:650px){.side-card .card-visual.toy-card-icon{width:92px;height:65px}.explore-card .toy-visual{height:88px}.item-tile .toy-visual,.target-tile .toy-visual{width:85px;height:60px}.toy-wheel-board{width:min(400px,95%);height:auto}.toy-wheel-board .wheel-slot{min-width:38px}.general-card .game-icon.toy-card-icon{width:80px;height:58px}}
