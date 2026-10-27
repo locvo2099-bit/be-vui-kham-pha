@@ -21,7 +21,10 @@ vehicle=function(type,color,noWheels=false){
  if(!found)return oldVehicle(type,color,noWheels);
  const s=sheetData[found[0]],b=s.cells[found[1]],href='./toys-3d-'+(found[0]+1)+'.webp';
  const clip='toy-crop-'+(++spriteSequence);
- return '<svg class="toy-visual toy-'+id+'" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 '+b[2]+' '+b[3]+'" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><defs><clipPath id="'+clip+'"><rect width="'+b[2]+'" height="'+b[3]+'"/></clipPath></defs><image x="'+(-b[0])+'" y="'+(-b[1])+'" width="'+s.width+'" height="'+s.height+'" href="'+href+'" xlink:href="'+href+'" clip-path="url(#'+clip+')"/></svg>';
+ const exclusions={'0:10':[[621,742,270,11]],'2:4':[[938,496,33,5]],'2:8':[[1357,745,15,6]],'2:9':[[142,748,90,12]],'2:11':[[1272,748,34,9]],'3:7':[[918,774,41,23]]};
+ let cropPath='M0 0H'+b[2]+'V'+b[3]+'H0Z';
+ (exclusions[found.join(':')]||[]).forEach(r=>{const x=r[0]-b[0],y=r[1]-b[1];cropPath+='M'+x+' '+y+'H'+(x+r[2])+'V'+(y+r[3])+'H'+x+'Z';});
+ return '<svg class="toy-visual toy-'+id+'" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 '+b[2]+' '+b[3]+'" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><defs><clipPath id="'+clip+'"><path clip-rule="evenodd" fill-rule="evenodd" d="'+cropPath+'"/></clipPath></defs><image x="'+(-b[0])+'" y="'+(-b[1])+'" width="'+s.width+'" height="'+s.height+'" href="'+href+'" xlink:href="'+href+'" clip-path="url(#'+clip+')"/></svg>';
 };
 drawPuzzle=function(){
  const count=level===1?2:4,url='./puzzle-'+(level===1?'fire':'excavator')+'.webp';
