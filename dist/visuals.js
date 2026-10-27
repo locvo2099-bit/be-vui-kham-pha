@@ -23,7 +23,7 @@ vehicle=function(type,color,noWheels=false){
  const clip='toy-crop-'+(++spriteSequence);
  const exclusions={'0:10':[[621,742,270,11]],'2:4':[[938,496,33,5]],'2:8':[[1357,745,15,6]],'2:9':[[142,748,90,12]],'2:11':[[1272,748,34,9]],'3:7':[[918,774,41,23]]};
  let cropPath='M0 0H'+b[2]+'V'+b[3]+'H0Z';
- (exclusions[found.join(':')]||[]).forEach(r=>{const x=r[0]-b[0],y=r[1]-b[1];cropPath+='M'+x+' '+y+'H'+(x+r[2])+'V'+(y+r[3])+'H'+x+'Z';});
+ (exclusions[found.join(':')]||[]).forEach(r=>{const x=Math.max(0,r[0]-b[0]),y=Math.max(0,r[1]-b[1]),right=Math.min(b[2],r[0]-b[0]+r[2]),bottom=Math.min(b[3],r[1]-b[1]+r[3]);if(right>x&&bottom>y)cropPath+='M'+x+' '+y+'H'+right+'V'+bottom+'H'+x+'Z';});
  return '<svg class="toy-visual toy-'+id+'" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 '+b[2]+' '+b[3]+'" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><defs><clipPath id="'+clip+'"><path clip-rule="evenodd" fill-rule="evenodd" d="'+cropPath+'"/></clipPath></defs><image x="'+(-b[0])+'" y="'+(-b[1])+'" width="'+s.width+'" height="'+s.height+'" href="'+href+'" xlink:href="'+href+'" clip-path="url(#'+clip+')"/></svg>';
 };
 drawPuzzle=function(){
